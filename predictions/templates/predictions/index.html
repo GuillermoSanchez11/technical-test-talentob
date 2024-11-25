@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'predictions/styles.css' %}">
+    <title>Subir archivo</title>
+  </head>
+  <body class="w-full justify-center flex min-h-dvh py-28 px-12">
+    <main class="w-[700px] flex flex-col gap-10">
+      <h1 class="text-4xl font-bold">
+        Sube un archivo Excel para predecir la supervivencia
+      </h1>
+      <hr />
+      <form
+        action="{% url 'predict' %}"
+        method="POST"
+        enctype="multipart/form-data"
+        class="flex flex-col gap-5"
+      >
+        {% csrf_token %}
+        <div class="flex flex-col gap-5 p-4 bg-gray-300 rounded-xl">
+          <label for="file">Seleccionar archivo:</label>
+          <input
+            type="file"
+            name="file"
+            id="file"
+            required
+            class="text-sm text-stone-500 file:mr-5 file:ml-2 file:font-bold file:bg-teal-400 file:text-teal-50 hover:file:bg-teal-500 file:px-4 file:py-2 file:transition-colors file:rounded-lg file:border-none file:text-xs file:cursor-pointer"
+          />
+        </div>
+        <div class="flex gap-4">
+          <button
+            type="submit"
+            class="w-fit font-bold bg-teal-400 text-teal-50 hover:bg-teal-500 px-4 py-2 rounded-lg transition-colors inline-flex gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 12m-9 0a9 9 0 0 1 18 0a9 9 0 0 1 -18 0" />
+              <path d="M12 12l0 0" />
+              <path d="M9.5 9.5a3.5 3.5 0 0 1 5 0a3.5 3.5 0 0 1 0 5a3.5 3.5 0 0 1 -5 0a3.5 3.5 0 0 1 0 -5" />
+            </svg>
+            Visualizar Resultados
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

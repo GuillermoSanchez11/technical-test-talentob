@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'predictions/styles.css' %}">
+    <title>Resultados de la Predicción</title>
+  </head>
+  <body class="w-full justify-center flex min-h-dvh py-28 px-12">
+    <main class="w-[900px] flex flex-col gap-10">
+      <h1 class="text-4xl font-bold">Resultados de la Predicción</h1>
+      <hr />
+      <div class="overflow-x-auto bg-white shadow-md rounded-lg p-4">
+        {{ html_table|safe }}
+      </div>
+      <a
+        href="{% url 'download_excel' %}"
+        class="mt-5 font-bold bg-teal-400 text-teal-50 hover:bg-teal-500 px-4 py-2 rounded-lg transition-colors inline-block"
+      >
+        Descargar Resultados en Excel
+      </a>
+    </main>
+  </body>
+</html>
