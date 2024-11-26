@@ -4,6 +4,10 @@
 
 This project is a **web application built with Django** that utilizes a pre-trained machine learning model to make predictions. Specifically, the application predicts survival outcomes for passengers aboard the Titanic based on their demographic and ticket details. Users can upload an Excel file with the required passenger information, which the app processes and uses to generate predictions, displaying the results in an interactive table on a webpage, it also allows you to download the results of the predictions in an Excel file.
 
+**This project is a technical test for Talento B.**
+
+[https://technical-test-talentob-production.up.railway.app](https://technical-test-talentob-production.up.railway.app)
+
 The application demonstrates:
 - **Model Integration:** A logistic regression model trained on the Titanic dataset.
 - **Excel File Processing:** Reads and validates user-uploaded Excel files.
@@ -12,6 +16,9 @@ The application demonstrates:
 ### Sample File for Testing
 
 A sample Excel file, **`excel_titanic.xlsx`**, is available in the `predictions/static/predictions/` directory. This file can be uploaded to the application to test its functionality and observe predictions. Ensure that the file structure and data format are preserved when creating or using custom Excel files.
+
+You can download the sample Excel file [here](predictions/static/predictions/excel_titanic.xlsx) to test the application.
+
 
 ## Technologies Used
 
@@ -23,10 +30,10 @@ A sample Excel file, **`excel_titanic.xlsx`**, is available in the `predictions/
 
 ### Frontend
 - **HTML/CSS:** Used for rendering the user interface.
-- **Swagger UI:** Integrated for API documentation.
 
 ### Other Tools
 - **Docker:** Containerization for easy deployment.
+- **Swagger UI:** Integrated for API documentation.
 - **Joblib:** For saving and loading the ML model and scaler.
 - **OpenPyXL:** For handling Excel files.
 
