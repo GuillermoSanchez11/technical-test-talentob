@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-o=)jckw364w7im2ioj)h55#kl4q*+k(^_$k54(%yd+6btqmhoh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["technical-test-talentob-production.up.railway.app"]
+ALLOWED_HOSTS = ["technical-test-talentob-production.up.railway.app", "127.0.0.1"]
 
 
 # Application definition
@@ -106,7 +106,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
+
+STATIC_ROOT = [
     os.path.join(BASE_DIR, 'predictions', 'static'),
 ]
 
