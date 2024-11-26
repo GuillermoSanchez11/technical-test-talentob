@@ -54,8 +54,8 @@ You can visit this link to upload your Excel file and test the application direc
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/GuillermoSanchez11/technical-test-talentob.git
+   cd technical-test-talentob
     ```
 2. Install dependencies:
     ```bash
