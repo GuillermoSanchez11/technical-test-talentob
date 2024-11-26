@@ -111,9 +111,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = [
-    os.path.join(BASE_DIR, 'predictions', 'static'),
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'predictions', 'static')
+
 STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
